@@ -1,110 +1,206 @@
 #include <iostream>
-
+#include <list>    // Fu√© necesario para guardar las ubicaciones
 using namespace std;
 
 int main (){
 
 	char op;
-	   int ent,total,pago,cambio;
+	int ent,total,pago,cambio;
+	list<string> ubicaciones;
+    list<string>::iterator actual;
+	string nueva_ubi;
 	   
-	   cout<<" *****øQue pelicula deseas ver hoy?***** "<<endl;
-	   cout<<"a). conic"<<endl;
-	   cout<<"b). conic 2"<<endl;
-	   cout<<"c). conic 3"<<endl;
-	   cout<<"d). conic 4"<<endl;
-	   cout<<"e). conic 5"<<endl;
-	   cout<<"Selecciona una opcion"<<endl;
-	   cin>>op;
+	cout<<"\n *****ÔøΩQue pelicula deseas ver hoy?***** "<<endl;
+	cout<<"a). Conic"<<endl;
+	cout<<"b). Conic 2"<<endl;
+	cout<<"c). Conic: Origenes "<<endl;
+	cout<<"d). Conic: Resurrection"<<endl;
+	cout<<"e). The End of Conic."<<endl;
+	cout<<"\nSelecciona una opcion."<<endl;
+	cin>>op;
 	   
-	   switch (op){
+	switch (op){
 	   	case 'a':
-	   		cout<<" # de entradas "<<endl;
+	   		cout<<"Numero de entradas: ";
 	   		cin>>ent;
+			if(ent == 0){cout<<"a, ok ._.";break;}
 	   		total=ent*80;
-	   		cout<<"El monto a pagar es"<<total<<endl;
-	   		cout<<"recibo"<<endl;
+	   		cout<<"El monto a pagar es de "<<total<<endl;
+	   		cout<<"Recibo (Cuanto dinero das?): ";
 	   		cin>>pago;
-	   		if(pago>=0){
+			if(pago < total){
+				cout<<"No tienes el dinero suficiente.";
+				break;
+			}
+			if(pago > 0){
 	   			
+				cout<<"\nIngrese las ubicaciones para sus asientos:"<<endl; getline(cin,nueva_ubi);
+				for( int n = 1  ;  n <= ent  ;  n++ ){
+					cout<<n<<". ";
+       				getline(cin,nueva_ubi);
+        			ubicaciones.push_back(nueva_ubi);
+   				}
+
 	   			cambio=pago-total;
-	   			cout<<"Tu pelicula es conic"<<endl;
-	   			cout<<"Tu cambio es de "<<cambio;
-			   }
-			   else{
-			   	cout<<"solo se aceptan numeros positivos"<<endl;
-			   }
-			   break;
+	   			cout<<"\nTu pelicula es Conic"<<endl;
+	   			cout<<"Tu cambio es de "<<cambio<<endl;
+				cout<<"Y las ubicaciones de tus asientos son: ";
+
+				for( actual = ubicaciones.begin()  ;  actual != ubicaciones.end()  ;  actual++ ){
+					cout << *actual << ", ";
+    			}
+
+			}else{
+			   	cout<<"Solo se aceptan numeros positivos."<<endl;
+			}break;
 			   
-			   	case 'b':
-	   		cout<<" # de entradas "<<endl;
+			
+		case 'b':
+	   		cout<<"Numero de entradas: ";
 	   		cin>>ent;
+			if(ent == 0){cout<<"a, ok ._.";break;}
 	   		total=ent*80;
-	   		cout<<"El monto a pagar es"<<total<<endl;
-	   		cout<<"recibo"<<endl;
+	   		cout<<"El monto a pagar es de "<<total<<endl;
+	   		cout<<"Recibo (Cuanto dinero das?): ";
 	   		cin>>pago;
-	   		if(pago>=0){
+			if(pago < total){
+				cout<<"No tienes el dinero suficiente.";
+				break;
+			}
+			if(pago > 0){
 	   			
+				cout<<"\nIngrese las ubicaciones para sus asientos:"<<endl; getline(cin,nueva_ubi);
+				for( int n = 1  ;  n <= ent  ;  n++ ){
+					cout<<n<<". ";
+       				getline(cin,nueva_ubi);
+        			ubicaciones.push_back(nueva_ubi);
+   				}
+
 	   			cambio=pago-total;
-	   			cout<<"Tu pelicula es conic 2"<<endl;
-	   			cout<<"Tu cambio es de "<<cambio;
-			   }
-			   else{
-			   	cout<<"solo se aceptan numeros positivos"<<endl;
-			   }
-			   break;
+	   			cout<<"\nTu pelicula es Conic 2"<<endl;
+	   			cout<<"Tu cambio es de "<<cambio<<endl;
+				cout<<"Y las ubicaciones de tus asientos son: ";
+
+				for( actual = ubicaciones.begin()  ;  actual != ubicaciones.end()  ;  actual++ ){
+					cout << *actual << ", ";
+    			}
+
+			}else{
+			   	cout<<"Solo se aceptan numeros positivos."<<endl;
+			}break;
 			   
-			   	case 'c':
-	   		cout<<" # de entradas "<<endl;
+		
+		case 'c':
+	   		cout<<"Numero de entradas: ";
 	   		cin>>ent;
+			if(ent == 0){cout<<"a, ok ._.";break;}
 	   		total=ent*80;
-	   		cout<<"El monto a pagar es"<<total<<endl;
-	   		cout<<"recibo"<<endl;
+	   		cout<<"El monto a pagar es de "<<total<<endl;
+	   		cout<<"Recibo (Cuanto dinero das?): ";
 	   		cin>>pago;
-	   		if(pago>=0){
+			if(pago < total){
+				cout<<"No tienes el dinero suficiente.";
+				break;
+			}
+			if(pago > 0){
 	   			
+				cout<<"\nIngrese las ubicaciones para sus asientos:"<<endl; getline(cin,nueva_ubi);
+				for( int n = 1  ;  n <= ent  ;  n++ ){
+					cout<<n<<". ";
+       				getline(cin,nueva_ubi);
+        			ubicaciones.push_back(nueva_ubi);
+   				}
+
 	   			cambio=pago-total;
-	   			cout<<"Tu pelicula es conic 3"<<endl;
-	   			cout<<"Tu cambio es de "<<cambio;
-			   }
-			   else{
-			   	cout<<"solo se aceptan numeros positivos"<<endl;
-			   }
-			   break;
+	   			cout<<"\nTu pelicula es Conic: Origenes "<<endl;
+	   			cout<<"Tu cambio es de "<<cambio<<endl;
+				cout<<"Y las ubicaciones de tus asientos son: ";
+
+				for( actual = ubicaciones.begin()  ;  actual != ubicaciones.end()  ;  actual++ ){
+					cout << *actual << ", ";
+    			}
+
+			}else{
+			   	cout<<"Solo se aceptan numeros positivos."<<endl;
+			}break;
 			   
-			   	case 'd':
-	   		cout<<" # de entradas "<<endl;
+		
+		case 'd':
+	   		cout<<"Numero de entradas: ";
 	   		cin>>ent;
+			if(ent == 0){cout<<"a, ok ._.";break;}
 	   		total=ent*80;
-	   		cout<<"El monto a pagar es"<<total<<endl;
-	   		cout<<"recibo"<<endl;
+	   		cout<<"El monto a pagar es de "<<total<<endl;
+	   		cout<<"Recibo (Cuanto dinero das?): ";
 	   		cin>>pago;
-	   		if(pago>=0){
+			if(pago < total){
+				cout<<"No tienes el dinero suficiente.";
+				break;
+			}
+			if(pago > 0){
 	   			
+				cout<<"\nIngrese las ubicaciones para sus asientos:"<<endl; getline(cin,nueva_ubi);
+				for( int n = 1  ;  n <= ent  ;  n++ ){
+					cout<<n<<". ";
+       				getline(cin,nueva_ubi);
+        			ubicaciones.push_back(nueva_ubi);
+   				}
+
 	   			cambio=pago-total;
-	   			cout<<"Tu pelicula es conic 4"<<endl;
-	   			cout<<"Tu cambio es de "<<cambio;
-			   }
-			   else{
-			   	cout<<"solo se aceptan numeros positivos"<<endl;
-			   }
-			   break;
+	   			cout<<"\nTu pelicula es Conic: Resurrection"<<endl;
+	   			cout<<"Tu cambio es de "<<cambio<<endl;
+				cout<<"Y las ubicaciones de tus asientos son: ";
+
+				for( actual = ubicaciones.begin()  ;  actual != ubicaciones.end()  ;  actual++ ){
+					cout << *actual << ", ";
+    			}
+
+			}else{
+			   	cout<<"Solo se aceptan numeros positivos."<<endl;
+			}break;
 			   
-			   	case 'e':
-	   		cout<<" # de entradas "<<endl;
+		
+		case 'e':
+	   		cout<<"Numero de entradas: ";
 	   		cin>>ent;
+			if(ent == 0){cout<<"a, ok ._.";break;}
 	   		total=ent*80;
-	   		cout<<"El monto a pagar es"<<total<<endl;
-	   		cout<<"recibo"<<endl;
+	   		cout<<"El monto a pagar es de "<<total<<endl;
+	   		cout<<"Recibo (Cuanto dinero das?): ";
 	   		cin>>pago;
-	   		if(pago>=0){
+			if(pago < total){
+				cout<<"No tienes el dinero suficiente.";
+				break;
+			}
+			if(pago > 0){
 	   			
+				cout<<"\nIngrese las ubicaciones para sus asientos:"<<endl; getline(cin,nueva_ubi);
+				for( int n = 1  ;  n <= ent  ;  n++ ){
+					cout<<n<<". ";
+       				getline(cin,nueva_ubi);
+        			ubicaciones.push_back(nueva_ubi);
+   				}
+
 	   			cambio=pago-total;
-	   			cout<<"Tu pelicula es conic 5"<<endl;
-	   			cout<<"Tu cambio es de "<<cambio;
-			   }
-			   else{
-			   	cout<<"solo se aceptan numeros positivos"<<endl;
-			   }
-			   break;
-	   }
-}
+	   			cout<<"\nTu pelicula es The End of Conic."<<endl;
+	   			cout<<"Tu cambio es de "<<cambio<<endl;
+				cout<<"Y las ubicaciones de tus asientos son: ";
+
+				for( actual = ubicaciones.begin()  ;  actual != ubicaciones.end()  ;  actual++ ){
+					cout << *actual << ", ";
+    			}
+
+			}else{
+			   	cout<<"Solo se aceptan numeros positivos."<<endl;
+			}break;
+	}
+}/*
+
+   _                ___       _.--.
+    \`.|\..----...-'`   `-._.-'_.-'`     
+    /  ' `         ,       _.-'   
+    )/' _/     \   `-_,   /           Quito was here.
+    `-'" `"\_  ,_.-;_.-\_ ',      
+        _.-'_./   {_.'   ; /            
+       {_.-``-'         {_/     
+       */                       

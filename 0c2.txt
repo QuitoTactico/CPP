@@ -1,0 +1,69 @@
+GNU C++17 (64)	<-- compilar en
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int n;
+    cin>>n;//lectura por consola de la variable
+    vector<int> vec;    //   vector<int> vec(inicializar # de posiciones, /optional/valor de esas posiciones);
+                        // mejor usar vectores que arraylists o arrays, solo usa vectores xfavor
+    int temp;
+    for (int i = 0; i < n; i++){ // para agregarlos como si fuera .append
+        cin>>temp;
+        vec.push_back(temp);
+    }
+
+    vector<int> vec2(n);  // forma de hacerlo para agregar las cosas linealmente normal
+    for(int = 0; i < vec2.size(); i++){
+        cin>>vec2[i]     
+    }
+
+    bool imprimioONo = False;
+    for(int i = 0; i < vec.size(); i++){  /revisa si son 1, si sí, imprime y el método muere por el return
+        if(vec[i] == 1){
+            cout<<"HARD\n";
+            //cout<<"HARD"<<endl   //significa endline, es para println, que cambie de línea
+            imprimioONo = True;
+            //return 0;  //podría ponerlo pa matar el metodo nomas
+        }
+    }
+    //cout<<"EASY"<<endl;  //la forma facil, si usamos el mata-Métodos return_0, else...
+    if(imprimioONo== False){
+        cout<<"EASY"
+    }
+    return 0;
+}
+
+cin>> console in | cout<< console out
+
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    //stack<int> sta;
+    int n;
+    cin >> n;
+    /*vector<int> vec1;
+    int temp;
+    for(int i = 0 ; i<0 ; i++){
+        cin>>temp;
+        vec1.push_back(temp);
+    }*/
+    vector<int> vec2(n);
+    for(i = 0 ; j < vec2.size() ; i++){
+    	cin>>vec2[i];
+    }
+    ezhr(vec2,n-1)
+    return 0;
+}
+string ezhr(vector<int> v,int p){
+    if(v[p] == 1){
+    	return "HARD";
+    }
+    else if (p == 0){
+    	return "EASY";
+    }
+    else{
+    	return ezhr(v,p-1);
+    }
+}

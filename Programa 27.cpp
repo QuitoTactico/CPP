@@ -3,7 +3,6 @@ using namespace std;
 int main ()
 {
 
-
   int mes,dia;
   
 cout<<"Selecciona un numero (1 AL 12)"<<endl;
@@ -121,7 +120,7 @@ switch (mes){
 			cout<<"La estacion a donde pertenece este mes es verano"<<endl;
 		}
 			if(dia>=22 && dia<=30){
-			cout<<"La estacion a la que pertenece este mes es otoño"<<endl;
+			cout<<"La estacion a la que pertenece este mes es otoï¿½o"<<endl;
 	    }
 		else{
 			cout<<"El dia que ingresaste no es valido"<<endl;
@@ -133,7 +132,7 @@ switch (mes){
 			cout<<"Ingresa un dia del mes (1 al 31)"<<endl;
 		cin>>dia;
 		if(dia>=1 && dia<=31){
-			cout<<"La estacion a donde pertenece este mes es otoño"<<endl;
+			cout<<"La estacion a donde pertenece este mes es otoï¿½o"<<endl;
 		}
 		else{
 			cout<<"El dia que ingresaste no es valido"<<endl;
@@ -145,7 +144,7 @@ switch (mes){
 			cout<<"Ingresa un dia del mes (1 al 31)"<<endl;
 		cin>>dia;
 		if(dia>=1 && dia<=30){
-			cout<<"La estacion a donde pertenece este mes es otoño"<<endl;
+			cout<<"La estacion a donde pertenece este mes es otoï¿½o"<<endl;
 		}
 		else{
 			cout<<"El dia que ingresaste no es valido"<<endl;
@@ -157,7 +156,7 @@ switch (mes){
 			cout<<"Ingresa un dia del mes (1 al 31)"<<endl;
 		cin>>dia;
 		if(dia>=1 && dia<=21){
-			cout<<"La estacion a donde pertenece este mes es otoño"<<endl;
+			cout<<"La estacion a donde pertenece este mes es otoï¿½o"<<endl;
 		
 			if(dia>=21 && dia<=31){
 			cout<<"La estacion a la que pertenece este mes es invierno"<<endl;
